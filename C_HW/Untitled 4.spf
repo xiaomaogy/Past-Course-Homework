@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>ContentFilters</key>
+	<dict/>
+	<key>auto_connect</key>
+	<true/>
+	<key>data</key>
+	<dict>
+		<key>connection</key>
+		<dict>
+			<key>database</key>
+			<string>yg79DB</string>
+			<key>host</key>
+			<string>mpcs53001</string>
+			<key>kcid</key>
+			<string>3957403982413400458</string>
+			<key>name</key>
+			<string>yg79</string>
+			<key>rdbms_type</key>
+			<string>mysql</string>
+			<key>ssh_host</key>
+			<string>linux.cs.uchicago.edu</string>
+			<key>ssh_keyLocation</key>
+			<string></string>
+			<key>ssh_keyLocationEnabled</key>
+			<integer>0</integer>
+			<key>ssh_user</key>
+			<string>yg79</string>
+			<key>sslCACertFileLocation</key>
+			<string></string>
+			<key>sslCACertFileLocationEnabled</key>
+			<integer>0</integer>
+			<key>sslCertificateFileLocation</key>
+			<string></string>
+			<key>sslCertificateFileLocationEnabled</key>
+			<integer>0</integer>
+			<key>sslKeyFileLocation</key>
+			<string></string>
+			<key>sslKeyFileLocationEnabled</key>
+			<integer>0</integer>
+			<key>type</key>
+			<string>SPSSHTunnelConnection</string>
+			<key>useSSL</key>
+			<integer>0</integer>
+			<key>user</key>
+			<string>yg79</string>
+		</dict>
+		<key>session</key>
+		<dict>
+			<key>connectionEncoding</key>
+			<string>latin1</string>
+			<key>contentFilter</key>
+			<dict/>
+			<key>contentPageNumber</key>
+			<integer>1</integer>
+			<key>contentSelection</key>
+			<data>
+			YnBsaXN0MDDUAQIDBAUGOjtYJHZlcnNpb25YJG9iamVjdHNZJGFy
+			Y2hpdmVyVCR0b3ASAAGGoK8QDwcIFRYXGBkfICEoLDA0OFUkbnVs
+			bNMJCgsMEBRXTlMua2V5c1pOUy5vYmplY3RzViRjbGFzc6MNDg+A
+			AoADgASjERITgAWABoAKgA5UdHlwZVRyb3dzVGtleXNfECZTZWxl
+			Y3Rpb25EZXRhaWxUeXBlUHJpbWFyeUtleWVkRGV0YWlsc9MJCgsa
+			HB6hG4AHoR2ACIAJVnRuNjU2OAnSIiMkJVokY2xhc3NuYW1lWCRj
+			bGFzc2VzXxATTlNNdXRhYmxlRGljdGlvbmFyeaMkJidcTlNEaWN0
+			aW9uYXJ5WE5TT2JqZWN00goLKSuhKoALgA3SCy0uL1lOUy5zdHJp
+			bmeADFdVc2VyX0lE0iIjMTJfEA9OU011dGFibGVTdHJpbmejMTMn
+			WE5TU3RyaW5n0iIjNTZeTlNNdXRhYmxlQXJyYXmjNTcnV05TQXJy
+			YXnSIiMmOaImJ18QD05TS2V5ZWRBcmNoaXZlctE8PVRkYXRhgAEA
+			CAARABoAIwAtADIANwBJAE8AVgBeAGkAcAB0AHYAeAB6AH4AgACC
+			AIQAhgCLAJAAlQC+AMUAxwDJAMsAzQDPANYA1wDcAOcA8AEGAQoB
+			FwEgASUBJwEpASsBMAE6ATwBRAFJAVsBXwFoAW0BfAGAAYgBjQGQ
+			AaIBpQGqAAAAAAAAAgEAAAAAAAAAPgAAAAAAAAAAAAAAAAAAAaw=
+			</data>
+			<key>contentSortCol</key>
+			<string>Age</string>
+			<key>contentSortColIsAsc</key>
+			<true/>
+			<key>contentViewport</key>
+			<string>{{0, 0}, {730, 481}}</string>
+			<key>isToolbarVisible</key>
+			<true/>
+			<key>queries</key>
+			<string>START TRANSACTION;
+
+CALL increaseThisAgeByTenIfLessThanTen(0);
+
+ROLLBACK;
+
+
+
+
+	
+	
+</string>
+			<key>table</key>
+			<string>Profile</string>
+			<key>view</key>
+			<string>SP_VIEW_STRUCTURE</string>
+			<key>windowVerticalDividerPosition</key>
+			<real>202</real>
+		</dict>
+	</dict>
+	<key>encrypted</key>
+	<false/>
+	<key>format</key>
+	<string>connection</string>
+	<key>queryFavorites</key>
+	<array/>
+	<key>queryHistory</key>
+	<array>
+		<string>SELECT CONTENT
+FROM Tweets
+WHERE CONTENT LIKE "%kc%"</string>
+		<string>SELECT Following_User_ID, firstName,lastName 
+FROM Following, Profile 
+WHERE Followed_User_ID = 'aa6797' and Following_User_ID=User_ID</string>
+		<string>ROLLBACK</string>
+		<string>START TRANSACTION;
+CALL increaseThisAgeByTenIfLessThanTen(0)</string>
+		<string>CALL increaseThisAgeByTenIfLessThanTen(0)</string>
+		<string>START TRANSACTION</string>
+		<string>CREATE PROCEDURE increaseThisAgeByTenIfLessThanTen(IN changeAge INT)
+BEGIN
+	DECLARE a_User_ID VARCHAR(50);
+	DECLARE a_Age VARCHAR(50);
+	DECLARE flag INT DEFAULT 0;
+	DECLARE profileIncreased CURSOR FOR
+		SELECT User_ID, Age
+		FROM Profile
+		WHERE Age = changeAge;
+	DECLARE CONTINUE HANDLER
+		FOR NOT FOUND
+		SET flag = 1;
+	OPEN profileIncreased;
+	
+	REPEAT 
+		FETCH profileIncreased INTO a_User_ID, a_Age;
+		IF a_Age &lt; 10 THEN
+			UPDATE Profile SET Age = a_Age+10
+			WHERE a_User_ID = User_ID;
+		END IF;
+	UNTIL flag = 1
+	END REPEAT;
+	CLOSE profileIncreased;
+	END;</string>
+		<string>CALL addNewProfile('aa1111','fea','fed','11')</string>
+		<string>CREATE PROCEDURE addNewProfile(
+	IN User_ID VARCHAR(50), 
+	IN firstName VARCHAR(50), 
+	IN lastName VARCHAR(50), 
+	IN Age INT)
+BEGIN
+	INSERT INTO Profile
+	VALUES(User_ID,firstName,lastName,Age);
+END;</string>
+		<string>SELECT @a</string>
+		<string>CALL p(@a)</string>
+		<string>SET @a=0</string>
+		<string>SELECT count</string>
+		<string>CREATE PROCEDURE p (OUT count INT)
+BEGIN
+	SELECT COUNT(*) into count FROM Profile;
+END;</string>
+		<string>drop trigger UpdateHashTag</string>
+		<string>SELECT @ProfileAdded</string>
+		<string>INSERT INTO Profile 
+VALUES ('aa3222','feafea','aeeae',5)</string>
+		<string>INSERT INTO HasHashtag VALUES ('fe439432','ach')</string>
+		<string>INSERT INTO HasHashtag VALUES ('fe789432','abc')</string>
+		<string>CREATE TRIGGER UpdateHashTag
+AFTER INSERT ON HasHashtag
+FOR EACH ROW
+BEGIN
+	INSERT IGNORE INTO Hashtag
+		VALUES (NEW.Hashtag_name);
+END;</string>
+	</array>
+	<key>rdbms_type</key>
+	<string>mysql</string>
+	<key>rdbms_version</key>
+	<string>5.5.35-0ubuntu0.12.04.2-log</string>
+	<key>version</key>
+	<integer>1</integer>
+</dict>
+</plist>

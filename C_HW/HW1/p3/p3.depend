@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1414604624 source:/Users/xiaomaogy/Desktop/C_HW/p3/main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+

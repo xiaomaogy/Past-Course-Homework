@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>ContentFilters</key>
+	<dict/>
+	<key>auto_connect</key>
+	<true/>
+	<key>data</key>
+	<dict>
+		<key>connection</key>
+		<dict>
+			<key>database</key>
+			<string>yg79DB</string>
+			<key>host</key>
+			<string>mpcs53001</string>
+			<key>kcid</key>
+			<string>3957403982413400458</string>
+			<key>name</key>
+			<string>yg79</string>
+			<key>rdbms_type</key>
+			<string>mysql</string>
+			<key>ssh_host</key>
+			<string>linux.cs.uchicago.edu</string>
+			<key>ssh_keyLocation</key>
+			<string></string>
+			<key>ssh_keyLocationEnabled</key>
+			<integer>0</integer>
+			<key>ssh_user</key>
+			<string>yg79</string>
+			<key>sslCACertFileLocation</key>
+			<string></string>
+			<key>sslCACertFileLocationEnabled</key>
+			<integer>0</integer>
+			<key>sslCertificateFileLocation</key>
+			<string></string>
+			<key>sslCertificateFileLocationEnabled</key>
+			<integer>0</integer>
+			<key>sslKeyFileLocation</key>
+			<string></string>
+			<key>sslKeyFileLocationEnabled</key>
+			<integer>0</integer>
+			<key>type</key>
+			<string>SPSSHTunnelConnection</string>
+			<key>useSSL</key>
+			<integer>0</integer>
+			<key>user</key>
+			<string>yg79</string>
+		</dict>
+		<key>session</key>
+		<dict>
+			<key>connectionEncoding</key>
+			<string>latin1</string>
+			<key>contentFilter</key>
+			<dict/>
+			<key>contentPageNumber</key>
+			<integer>1</integer>
+			<key>contentSelection</key>
+			<data>
+			YnBsaXN0MDDUAQIDBAUGOjtYJHZlcnNpb25YJG9iamVjdHNZJGFy
+			Y2hpdmVyVCR0b3ASAAGGoK8QDwcIFRYXGBkfICEoLDA0OFUkbnVs
+			bNMJCgsMEBRXTlMua2V5c1pOUy5vYmplY3RzViRjbGFzc6MNDg+A
+			AoADgASjERITgAWABoAKgA5UdHlwZVRyb3dzVGtleXNfECZTZWxl
+			Y3Rpb25EZXRhaWxUeXBlUHJpbWFyeUtleWVkRGV0YWlsc9MJCgsa
+			HB6hG4AHoR2ACIAJUlQ1CdIiIyQlWiRjbGFzc25hbWVYJGNsYXNz
+			ZXNfEBNOU011dGFibGVEaWN0aW9uYXJ5oyQmJ1xOU0RpY3Rpb25h
+			cnlYTlNPYmplY3TSCgspK6EqgAuADdILLS4vWU5TLnN0cmluZ4AM
+			WFR3ZWV0X0lE0iIjMTJfEA9OU011dGFibGVTdHJpbmejMTMnWE5T
+			U3RyaW5n0iIjNTZeTlNNdXRhYmxlQXJyYXmjNTcnV05TQXJyYXnS
+			IiMmOaImJ18QD05TS2V5ZWRBcmNoaXZlctE8PVRkYXRhgAEACAAR
+			ABoAIwAtADIANwBJAE8AVgBeAGkAcAB0AHYAeAB6AH4AgACCAIQA
+			hgCLAJAAlQC+AMUAxwDJAMsAzQDPANIA0wDYAOMA7AECAQYBEwEc
+			ASEBIwElAScBLAE2ATgBQQFGAVgBXAFlAWoBeQF9AYUBigGNAZ8B
+			ogGnAAAAAAAAAgEAAAAAAAAAPgAAAAAAAAAAAAAAAAAAAak=
+			</data>
+			<key>contentSortColIsAsc</key>
+			<true/>
+			<key>contentViewport</key>
+			<string>{{0, 0}, {745, 481}}</string>
+			<key>isToolbarVisible</key>
+			<true/>
+			<key>queries</key>
+			<string>INSERT INTO HasHashtag
+SELECT 'T14',(SELECT Hashtag_name from Hashtag Where Hashtag_name ='amex')</string>
+			<key>table</key>
+			<string>HasHashtag</string>
+			<key>view</key>
+			<string>SP_VIEW_CONTENT</string>
+			<key>windowVerticalDividerPosition</key>
+			<real>202</real>
+		</dict>
+	</dict>
+	<key>encrypted</key>
+	<false/>
+	<key>format</key>
+	<string>connection</string>
+	<key>queryFavorites</key>
+	<array/>
+	<key>queryHistory</key>
+	<array>
+		<string>INSERT INTO HasHashtag
+SELECT 'T14',(SELECT Hashtag_name from Hashtag Where Hashtag_name ='amex')</string>
+		<string>UPDATE HasHashtag 
+SET Hashtag_name = 'amex'
+WHERE Tweet_ID='T3'</string>
+		<string>DELETE FROM HasHashtag 
+WHERE Hashtag_name='amex'</string>
+		<string>INSERT INTO HasHashtag
+SELECT 'T13', Hashtag_name from Hashtag Where Hashtag_name ='amex'</string>
+		<string>INSERT INTO HasHashtag
+VALUES ('T13',SELECT Hashtag_name from Hashtag Where Hashtag_name ='amex')</string>
+		<string>INSERT INTO HasHashtag VALUES ('T12','honey')</string>
+		<string>UPDATE TABLE HasHashtag 
+SET Hashtag_name = 'amex'
+WHERE Tweet_ID='T2'</string>
+		<string>UPDATE HasHashtag 
+SET `Hashtag_name` = 'amex'
+WHERE `Tweet_ID`='T2'</string>
+		<string>UPDATE HasHashtag 
+SET Hashtag_name = `amex`
+WHERE Tweet_ID=`T2`</string>
+		<string>UPDATE HasHashtag 
+SET Hashtag_name='amex'
+WHERE Tweet_ID='T2'</string>
+		<string>UPDATE FROM HasHashtag 
+SET Hashtag_name='amex'
+WHERE Tweet_ID='T2'</string>
+		<string>DELETE FROM HasHashtag 
+WHERE Hashtag_name="amex"</string>
+		<string>DELETE FROM HasHashtag Hashtag_name='amex'</string>
+		<string>INSERT INTO HasHashtag
+VALUES (T13,SELECT Hashtag_name from Hashtag Where Hashtag_name ='amex')</string>
+		<string>INSERT INTO Following 
+VALUES (22,'ef72', 'iu73')</string>
+		<string>SELECT User_ID FROM Profile WHERE Last_Name = 'up'</string>
+		<string>SELECT User_ID FROM Profile WHERE First_Name = 'ebby'</string>
+		<string>INSERT INTO Following 
+VALUES (22,SELECT User_ID FROM Profile WHERE First_Name = 'ebby', SELECT User_ID FROM Profile WHERE Last_Name = 'up')</string>
+		<string>SELECT User_ID FROM Profile WHERE Last_Name = 'edd'</string>
+		<string>INSERT INTO Following 
+VALUES (22,SELECT User_ID FROM Profile WHERE First_Name = 'ebby', SELECT User_ID FROM Profile WHERE Last_Name = 'edd')</string>
+	</array>
+	<key>rdbms_type</key>
+	<string>mysql</string>
+	<key>rdbms_version</key>
+	<string>5.5.35-0ubuntu0.12.04.2-log</string>
+	<key>version</key>
+	<integer>1</integer>
+</dict>
+</plist>

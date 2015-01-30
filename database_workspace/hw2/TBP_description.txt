@@ -1,0 +1,16 @@
+ERD description
+
+The user entity has user ID, password and email address to locate the user entity. 
+
+Users has a recursive following relationship. 
+
+Users can send and retweet all the tweets, which contains the tweets’s Tweet ID, tweet content and tweet time. 
+
+Users can send private messages, which contains title, text and message time.
+
+Users has a profile which contains the user’s real name, header photo, birthday.
+
+Each tweet contains one or more hashtags. 
+
+
+

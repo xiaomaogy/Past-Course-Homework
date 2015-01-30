@@ -1,0 +1,94 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html> 
+<head>
+<title>MPCS53001 Twitter interface HW8</title>
+</head>
+
+<body>
+<h1>MPCS53001 Twitter interface HW8</h1>
+
+First, a link to show all the available username;
+
+<p>
+<a href="list_username.php">List all username!</a>
+<hr>
+
+
+Second, a link to show all the available tweets;
+
+<p>
+<a href="list_tweets.php">List all tweets!</a>
+<hr>
+
+Third, a form to get all attributes of a user given a username.  The script that runs when you press the <it>Submit</it> button is <code>list_attrs.php</code>.
+<p>
+
+<form method=get action="list_attrs.php">
+<b>Enter username:</b><br />
+<input type="text" name="user"><br />
+<input type="submit" value="Get User's email and password">
+</form>
+
+<hr>
+
+Forth, a form to get the profile of a user given a username. 
+
+<p>
+	
+<form method=get action="list_profile.php">
+<b>Enter username:</b><br />
+<input type="text" name="user"><br />
+<input type="submit" value="Get User's Profile">
+</form>
+
+<hr>
+
+Fifth, a form to get the answer that the entered user is followed by who
+
+<p>
+	
+<form method=get action="list_followed.php">
+<b>Enter username:</b><br />
+<input type="text" name="user"><br />
+<input type="submit" value="Get User's Followed info">
+</form>
+<hr>
+
+Sixth, a form to get the answer that the entered user is following whom
+
+<p>
+	
+<form method=get action="list_following.php">
+<b>Enter username:</b><br />
+<input type="text" name="user"><br />
+<input type="submit" value="Get User's Following info">
+</form>
+	
+<hr>
+
+Seventh, a form to list all the tweets that contain certain word segment.
+<p>
+	
+<form method=get action="search_tweets.php">
+<b>Search Tweet:</b><br />
+<input type="text" name="seg"><br />
+<input type="submit" value="Get the related tweets">
+</form>
+	
+<hr>
+
+Eighth, a form to list all the tweets that sent by one user.
+<p>
+	
+<form method=get action="list_user_tweets.php">
+<b>Search Tweet:</b><br />
+<input type="text" name="user"><br />
+<input type="submit" value="Get his/her tweets">
+</form>
+	
+<hr>
+
+
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+Relational schema
+
+User( User ID, User email, User password)
+
+User ID -> User email, password
+
+
+Following( User ID, following User ID)
+
+
+Profile( User ID, Real Name, Birthday)
+
+User ID -> Real Name, Birthday
+
+
+Tweets( Tweet ID, Content)
+
+Tweet ID-> Content
+
+
+Sends( User ID, Tweet ID)
+
+
+Retweet( User ID, Tweet ID)
+
+
+Hashtag( hashtag name) 
+
+
+HasHashtag( Tweet ID, Hashtag name)
+
+

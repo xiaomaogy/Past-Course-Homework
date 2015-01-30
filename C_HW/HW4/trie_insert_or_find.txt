@@ -1,0 +1,78 @@
+trie_node_t * current;
+    current=trie->root;
+    int num=0;
+    assert(str);
+    while(true){
+        if(current->letter==str[num]){
+            if(str[num+1]=='\0'){
+                current->valid_data=true;
+                current->data=(char *)malloc(sizeof(strlen(str)+1));
+                strcpy(current->data,str);
+                
+                //printf("find old word: %s\n",(char *)current->data);
+                return current;
+            }else{
+                if(current->child==NULL){
+                    while(true){
+                        current->child=trie_newnode();
+                        current=current->child;
+                        current->letter=str[num];
+                        current->data=(char *)malloc(num+2);
+                        strncpy(current->data,str,num+1);
+                        num++;
+                        if(str[num]=='\0'){
+                            current->valid_data=true;
+                            //printf("1find new word: %s\n",(char *)current->data);
+                            return current;
+                        }
+                    }
+                }
+                current=current->child;
+                num++;
+                continue;
+            }
+
+        }
+        
+        if(current->letter==0){
+            while(true){
+                current->letter=str[num];
+                current->data=(char *)malloc(num+2);
+                strncpy(current->data,str,num+1);
+                num++;
+                if(str[num]=='\0'){
+                    current->valid_data=true;
+                    
+                    //printf("2find new word: %s\n",(char *)current->data);
+                    return current;
+                }
+                current->child=trie_newnode();
+                current=current->child;
+            }
+        }
+        
+        if(current->sibling==NULL){
+            current->sibling=trie_newnode();
+            current=current->sibling;
+            current->letter=str[num++];
+            current->data=(char *)malloc(num+1);
+            strncpy(current->data,str,num);
+            while(true){
+                if(str[num]=='\0'){
+                    current->valid_data=true;
+                    current->data=(char *)malloc(sizeof(strlen(str)+1));
+                    strcpy(current->data,str);
+                    //printf("3find new word: %s\n",(char *)current->data);
+                    return current;
+                }
+                current->child=trie_newnode();
+                current=current->child;
+                current->letter=str[num++];
+                current->data=(char *)malloc(num+1);
+                strncpy(current->data,str,num);
+            }
+        }
+        
+        current=current->sibling;
+        
+        
